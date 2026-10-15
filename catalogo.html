@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Catálogo - Biblioteca IEMAB</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="barra-nav">
+    <div class="titulo"><img class="escudo-nav" src="assets/escudo.png" alt="" /><span>Biblioteca IEMAB</span></div>
+    <nav>
+      <a href="dashboard.html">Inicio</a>
+      <a href="catalogo.html">Catálogo</a>
+      <a href="mis-reservas.html" data-roles="estudiante">Mis préstamos</a>
+      <a href="reservas.html" data-roles="administrador,bibliotecario">Reservas</a>
+      <a href="prestamos.html" data-roles="administrador,bibliotecario">Préstamos</a>
+      <a href="libros.html" data-roles="administrador,bibliotecario">Libros</a>
+      <a href="usuarios.html" data-roles="administrador">Usuarios</a>
+    </nav>
+    <div class="usuario-info">
+      <span id="nombre-usuario"></span>
+      <button id="btn-cerrar-sesion">Salir</button>
+    </div>
+  </header>
+
+  <main>
+    <h1>Catálogo de libros</h1>
+    <div id="mensaje-catalogo" class="mensaje oculto"></div>
+
+    <input
+      type="search"
+      id="buscador"
+      placeholder="Buscar por título, autor o categoría..."
+      style="max-width: 420px; margin-bottom: 1.25rem;"
+    />
+
+    <div id="grid-libros" class="grid-libros"></div>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="js/supabaseClient.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/guard.js"></script>
+  <script src="js/catalogo.js"></script>
+</body>
+</html>

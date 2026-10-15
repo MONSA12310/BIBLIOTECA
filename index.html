@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Iniciar sesión - Biblioteca IEMAB</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="centrado">
+    <div class="tarjeta tarjeta-login">
+      <div class="marca-login">
+        <img class="escudo-login" src="assets/escudo.png" alt="Escudo del I.E. Maestro Arenas Betancur" />
+        <p>Institución Educativa<br />Maestro Arenas Betancur</p>
+      </div>
+      <h1>Biblioteca IEMAB</h1>
+      <p class="texto-ayuda">Inicia sesión con la cuenta que te dio el colegio.</p>
+
+      <div id="mensaje-login" class="mensaje oculto"></div>
+
+      <form id="form-login">
+        <label>
+          Correo electrónico
+          <input type="email" id="login-email" required autocomplete="username" />
+        </label>
+        <label>
+          Contraseña
+          <input type="password" id="login-password" required autocomplete="current-password" />
+        </label>
+        <button type="submit">Ingresar</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- SDK de Supabase (CDN) -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <!-- Configuración del cliente Supabase de este proyecto -->
+  <script src="js/supabaseClient.js"></script>
+  <!-- Lógica de login -->
+  <script src="js/auth.js"></script>
+</body>
+</html>
